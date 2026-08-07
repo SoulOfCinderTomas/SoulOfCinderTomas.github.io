@@ -1,7 +1,17 @@
 ---
 import SiteIntro from './SiteIntro.astro';
+import Nav from './Nav.astro';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
 ---
 
 <header class="mb-8 flex flex-col lg:hidden">
   <SiteIntro variant="mobile" />
+  <div class="mt-6">
+    <Nav currentPath={currentPath} />
+  </div>
 </header>

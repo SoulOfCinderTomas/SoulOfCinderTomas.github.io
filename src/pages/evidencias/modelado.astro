@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EvidenciaPlaceholder from '../../components/EvidenciaPlaceholder.astro';
+import { site } from '@data/site';
+
+const title = `Modelado | ${site.hero.name}`;
+---
+
+<Layout title={title} description="Evidencia de modelado de base de datos.">
+  <EvidenciaPlaceholder
+    title="Modelado"
+    description="Aquí irá la evidencia de modelado (diagrama entidad-relación, modelo relacional, capturas o archivos del proyecto). Sección aún vacía."
+  />
+</Layout>

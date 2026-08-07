@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EvidenciaPlaceholder from '../../components/EvidenciaPlaceholder.astro';
+import { site } from '@data/site';
+
+const title = `Normalización | ${site.hero.name}`;
+---
+
+<Layout title={title} description="Evidencia de normalización de base de datos.">
+  <EvidenciaPlaceholder
+    title="Normalización"
+    description="Aquí irá la evidencia de normalización (formas normales aplicadas, justificación y tablas resultantes). Sección aún vacía."
+  />
+</Layout>

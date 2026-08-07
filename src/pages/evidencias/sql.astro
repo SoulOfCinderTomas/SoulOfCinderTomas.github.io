@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EvidenciaPlaceholder from '../../components/EvidenciaPlaceholder.astro';
+import { site } from '@data/site';
+
+const title = `SQL | ${site.hero.name}`;
+---
+
+<Layout title={title} description="Evidencia de scripts y consultas SQL.">
+  <EvidenciaPlaceholder
+    title="SQL"
+    description="Aquí irán los scripts de creación, consultas y evidencias de ejecución en SQL. Sección aún vacía."
+  />
+</Layout>

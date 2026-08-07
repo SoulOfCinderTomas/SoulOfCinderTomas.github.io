@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EvidenciaPlaceholder from '../../components/EvidenciaPlaceholder.astro';
+import { site } from '@data/site';
+
+const title = `Proyecto | ${site.hero.name}`;
+---
+
+<Layout title={title} description="Proyecto final de la asignatura.">
+  <EvidenciaPlaceholder
+    title="Proyecto"
+    description="Aquí irá la descripción y evidencias del proyecto final (integrando modelado, normalización y SQL). Sección aún vacía."
+  />
+</Layout>

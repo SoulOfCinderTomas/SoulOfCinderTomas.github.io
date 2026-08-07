@@ -1,5 +1,8 @@
-export const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#experiences', label: 'Experiences' },
-  { href: '#featured-projects', label: 'Featured Projects' },
+export const navLinks = [{ href: '/', label: 'Presentación' }] as const;
+
+export const evidenciasLinks = [
+  { slug: 'modelado', label: 'Modelado' },
+  { slug: 'normalizacion', label: 'Normalización' },
+  { slug: 'sql', label: 'SQL' },
+  { slug: 'proyecto', label: 'Proyecto' },
 ] as const;

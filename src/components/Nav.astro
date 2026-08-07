@@ -1,0 +1,58 @@
+---
+import { navLinks, evidenciasLinks } from '@data/nav';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const normalize = (p: string) => (p.endsWith('/') ? p : `${p}/`);
+const current = normalize(currentPath);
+const isHomeActive = current === base;
+---
+
+<nav aria-label="Primary">
+  <ul class="flex flex-col items-center gap-4">
+    {
+      navLinks.map((link) => (
+        <li>
+          <a
+            href={base}
+            class:list={['nav-link', isHomeActive && 'nav-link-active']}
+            aria-current={isHomeActive ? 'true' : undefined}
+          >
+            <span>{link.label}</span>
+          </a>
+        </li>
+      ))
+    }
+    <li class="pt-2">
+      <p class="nav-group-label">Evidencias</p>
+      <ul class="mt-2 flex flex-col items-center gap-2">
+        {
+          evidenciasLinks.map((link) => {
+            const href = `${base}evidencias/${link.slug}/`;
+            const isActive = current === href;
+            return (
+              <li>
+                <a
+                  href={href}
+                  class:list={['nav-sublink', isActive && 'nav-link-active']}
+                  aria-current={isActive ? 'true' : undefined}
+                  data-astro-prefetch
+                >
+                  {link.label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </li>
+  </ul>
+</nav>

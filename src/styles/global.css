@@ -88,41 +88,25 @@
   .panel-card {
     @apply rounded-md bg-white-soft p-6 transition duration-200;
   }
+
+  .nav-group-label {
+    @apply mb-1 text-xs font-semibold uppercase tracking-widest text-slate-lightest;
+  }
+
+  .nav-sublink {
+    @apply inline-flex items-center text-xs uppercase tracking-widest text-slate-light transition-all duration-200;
+  }
 }
 
 @layer base {
-  /* Theme Variations */
+  /* Tema: azul */
   :root,
-  [data-theme="default-dark"] {
-    --color-background: #121212;
-    --color-accent: #EAB308;
-    --color-maintext: #FAFAF9;
-    --color-subtext: #dad0c9;
-    --color-textrain: #777271;
-  }
-
-  [data-theme="strategic-dark"] {
-    --color-background: #0F172A;
-    --color-accent: #38BDF8;
-    --color-maintext: #F1F5F9;
-    --color-subtext: #a0adbf;
-    --color-textrain: #4d5b6f;
-  }
-
-  [data-theme="innovator-dark"] {
-    --color-background: #0B0F0E;
-    --color-accent: #BEF264;
-    --color-maintext: #FFFFFF;
-    --color-subtext: #c4c3c3;
-    --color-textrain: #567b6c;
-  }
-
-  [data-theme="midnight-dark"] {
-    --color-background: #0F0D29;
-    --color-accent: #A78BFA;
-    --color-maintext: #FFFFFF;
-    --color-subtext: #b2bed1;
-    --color-textrain: #7d7b9c;
+  [data-theme="azul-dark"] {
+    --color-background: #0A1128;
+    --color-accent: #3B82F6;
+    --color-maintext: #F8FAFC;
+    --color-subtext: #A9B8D4;
+    --color-textrain: #51617E;
   }
 
   *::selection {
