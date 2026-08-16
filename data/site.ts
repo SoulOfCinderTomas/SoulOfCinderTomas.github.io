@@ -21,7 +21,7 @@ export const site = {
 
   video: {
     type: 'youtube' as 'youtube' | 'file' | 'link',
-    src: '',
+    src: 'Portafolio.mp4',
     title: 'Video de presentación',
   },
 } as const;
