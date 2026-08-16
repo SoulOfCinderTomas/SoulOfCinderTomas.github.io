@@ -20,7 +20,7 @@ export const site = {
   },
 
   video: {
-    type: 'youtube' as 'youtube' | 'file' | 'link',
+    type: 'file' as 'youtube' | 'file' | 'link',
     src: '/Portafolio.mp4',
     title: 'Video de presentación',
   },
